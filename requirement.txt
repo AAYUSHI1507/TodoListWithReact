@@ -1,0 +1,5 @@
+React js from vite is used.
+npm create vite@latest
+npm install 
+npm run dev -- to run the application
+tailwind css
