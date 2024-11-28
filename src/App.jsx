@@ -34,7 +34,7 @@ function App() {
             </div>
             <div className="buttons">
               <button
-                className="bg-red-500 hover:bg-red-700 font-bold mx-3 -my-1 text-red-200 px-2 py-1 rounded-lg"
+                className="bg-red-500 hover:bg-red-700 font-bold mx-3  text-red-200 px-2 py-1 rounded-lg"
                 onClick={HandleEdit}
               >
                 Edit
