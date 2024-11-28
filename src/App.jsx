@@ -25,7 +25,10 @@ function App() {
   };
   const handleCheckBox = (e) =>{
     let id = e.target.name;
-    
+    let index = todos.findIndex(item =>{
+      return item.id === id;
+    })
+
   }
   return (
     <>
