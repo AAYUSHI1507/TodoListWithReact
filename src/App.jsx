@@ -68,7 +68,7 @@ function App() {
                   className="bg-red-500 hover:bg-red-700 font-bold text-red-200 px-2 py-1 rounded-md mx-2"
                   onClick={HandleDelete}
                 >
-                  Delete now button
+                  Delete
                 </button>
               </div>
             </div>

@@ -9,6 +9,8 @@ const Navbar = () => {
         <ul className='flex gap-8 mx-9'>
             <li className='cursor-pointer hover:font-bold transition-all duration-450'>Home</li>
             <li className='cursor-pointer hover:font-bold transition-all duration-450'>Yours Tasks</li>
+            <li className='cursor-pointer hover:font-bold transition-all duration-450'> Search Yours Tasks</li>
+
         </ul>
     </nav>
   )
