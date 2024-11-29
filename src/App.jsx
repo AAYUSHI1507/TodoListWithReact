@@ -2,7 +2,7 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import Navbar from "./components/Navbar";
-const { v4: uuidv4 } = require('uuid');
+const { v4: uuidv4 } = require("uuid");
 uuidv4(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'
 //import './App.css'
 
@@ -14,22 +14,19 @@ function App() {
   const HandleEdit = () => {};
   const HandleDelete = () => {};
   const handleAdd = () => {
-    setTodos([...todos, {id: uuidv4() ,todo, isCompleted: false }]);
+    setTodos([...todos, { id: uuidv4(), todo, isCompleted: false }]);
     setTodo("");
     console.log(todos);
-
   };
   const handleChange = (e) => {
     setTodo(e.target.value);
-
   };
-  const handleCheckBox = (e) =>{
+  const handleCheckBox = (e) => {
     let id = e.target.name;
-    let index = todos.findIndex(item =>{
+    let index = todos.findIndex((item) => {
       return item.id === id;
-    })
-
-  }
+    });
+  };
   return (
     <>
       <Navbar />
@@ -52,26 +49,34 @@ function App() {
         <h2 className="text-lg font-bold">Yours Todos</h2>
         <div className="todos">
           {todos.map((item) => {
-            return <div key={todo} className="todo flex w-1/2 my-3 justify-between">
-              <input type="checkbox" onChange={handleCheckBox} value={item.isCompleted} name={todo.id} id="" />
-              <div className={item.isCompleted ? "line-through" : ""}>
-                {item.todo}
+            return (
+              <div key={todo} className="todo flex w-1/2 my-3 justify-between">
+                <input
+                  type="checkbox"
+                  onChange={handleCheckBox}
+                  value={item.isCompleted}
+                  name={todo.id}
+                  id=""
+                />
+                <div className={item.isCompleted ? "line-through" : ""}>
+                  {item.todo}
+                </div>
+                <div className="buttons">
+                  <button
+                    className="bg-red-500 hover:bg-red-700 font-bold  text-red-200 px-2 py-1 rounded-md mx-2"
+                    onClick={HandleEdit}
+                  >
+                    Edit
+                  </button>
+                  <button
+                    className="bg-red-500 hover:bg-red-700 font-bold text-red-200 px-2 py-1 rounded-md mx-2"
+                    onClick={HandleDelete}
+                  >
+                    Delete
+                  </button>
+                </div>
               </div>
-              <div className="buttons">
-                <button
-                  className="bg-red-500 hover:bg-red-700 font-bold  text-red-200 px-2 py-1 rounded-md mx-2"
-                  onClick={HandleEdit}
-                >
-                  Edit
-                </button>
-                <button
-                  className="bg-red-500 hover:bg-red-700 font-bold text-red-200 px-2 py-1 rounded-md mx-2"
-                  onClick={HandleDelete}
-                >
-                  Delete
-                </button>
-              </div>
-            </div>
+            );
           })}
         </div>
       </div>
