@@ -1,4 +1,5 @@
 # React + Vite
+This is the react app which is created today to complete the example application
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
